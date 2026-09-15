@@ -11,7 +11,7 @@
 // Recommeded for benchmark as steady_clock is monotonic and not affected by system clock changes
 using Clock = std::chrono::steady_clock;
 
-namespace matmul {
+namespace timer {
 
 class Timer
 {
@@ -29,7 +29,7 @@ public:
     const auto elapsed = Clock::now() - start_;
     const auto elapsed_ms = std::chrono::duration<double, std::milli>(elapsed).count();
 
-    // assert(elapsed_ms >= 0.0 && "Elapsed time should be non-negative");
+    assert(elapsed_ms >= 0.0 && "Elapsed time should be non-negative");
     return elapsed_ms;
   }
 
@@ -39,4 +39,4 @@ private:
   std::chrono::high_resolution_clock::time_point start_;
 };
 
-}// namespace matmul
+}// namespace timer
