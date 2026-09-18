@@ -1,5 +1,5 @@
 /*
- * Minimal wall-clock timer
+ * Minimal wall-clock timer to benchmark code execution time in milliseconds.
  *
  */
 
