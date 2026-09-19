@@ -26,6 +26,8 @@ cmake --build build
 ./build/naive_matmul
 ./build/cache_aware_matmul
 ./build/cache_oblivious_matmul
+# OR
+./run.sh
 ```
 
 ## Generate Plots
