@@ -1,5 +1,8 @@
 # Algorithms & Performance Optimization
 
+The project focuses on implementing three matrix multiplication algorithms: naive, cache-aware, and cache-oblivious. The benchmark
+will generate random matrices of size `N x N` for `N = 128, 256, 512, 1024, 500, 750`, `b = 8, 16, 32, 64, 128` for cache-aware algorithms and `t = 8, 16, 32, 64, 128` for cache-oblivious algorithms, and measure the execution time for each algorithm. The results will be stored in CSV files for analysis. The task written in C++20 and build using CMake
+
 ## Project Setup
 
 Project structure reference from [Link](https://github.com/cpp-best-practices/cmake_template)
