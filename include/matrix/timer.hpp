@@ -36,7 +36,7 @@ public:
 
 private:
   // Ensure that start is not modified by the user
-  std::chrono::high_resolution_clock::time_point start_;
+  Clock::time_point start_;
 };
 
 }// namespace timer

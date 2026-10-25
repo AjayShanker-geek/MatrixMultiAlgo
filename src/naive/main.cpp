@@ -10,9 +10,7 @@
 
 #include "logger.hpp"
 #include "naive.hpp"
-#include "param.hpp"
 #include "timer.hpp"
-#include "validation.hpp"
 
 #include "matrices_1024.hpp"
 #include "matrices_128.hpp"
@@ -22,7 +20,6 @@
 #include "matrices_750.hpp"
 
 using namespace naive;
-
 
 int main()
 {

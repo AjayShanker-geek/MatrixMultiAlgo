@@ -22,7 +22,7 @@ public:
 
   void log_timing(const std::string &algorithm,
     std::size_t matrix_size,
-    double &time_ms,
+    double time_ms,
     int block_or_threshold,
     double elapsed_padding_t)
   {
