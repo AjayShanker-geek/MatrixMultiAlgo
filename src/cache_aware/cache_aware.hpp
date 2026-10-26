@@ -31,7 +31,7 @@ void blocked_matmul(const std::array<std::array<double, N>, N> &A,
 
         for (std::size_t i = ii; i < i_end; ++i) {
           for (std::size_t j = jj; j < j_end; ++j) {
-            for (std::size_t k = kk; k < k_end; ++k) { C.at(i).at(j) += A.at(i).at(k) * B.at(k).at(j); }
+            for (std::size_t k = kk; k < k_end; ++k) { C[i][j] += A[i][k] * B[k][j]; }
           }
         }
       }

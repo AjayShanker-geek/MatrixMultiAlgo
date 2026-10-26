@@ -51,9 +51,7 @@ void naive_submatrix(const std::array<std::array<double, N>, N> &A,
 {
   for (std::size_t i = 0; i < size; ++i) {
     for (std::size_t j = 0; j < size; ++j) {
-      for (std::size_t k = 0; k < size; ++k) {
-        C.at(cr + i).at(cc + j) += A.at(ar + i).at(ac + k) * B.at(br + k).at(bc + j);
-      }
+      for (std::size_t k = 0; k < size; ++k) { C[cr + i][cc + j] += A[ar + i][ac + k] * B[br + k][bc + j]; }
     }
   }
 }
@@ -136,12 +134,12 @@ template<std::size_t N> auto pad_matrix(const std::array<std::array<double, N>, 
 
   // Copy the original matrix into the top-left corner of the padded matrix.
   for (std::size_t i = 0; i < N; ++i) {
-    for (std::size_t j = 0; j < N; ++j) { padded->at(i).at(j) = input.at(i).at(j); }
+    for (std::size_t j = 0; j < N; ++j) { padded->at(i)[j] = input[i][j]; }
   }
 
   // Fill the remaining elements with zeros.
   for (std::size_t i = N; i < P; ++i) {
-    for (std::size_t j = 0; j < P; ++j) { padded->at(i).at(j) = 0.0; }
+    for (std::size_t j = 0; j < P; ++j) { padded->at(i)[j] = 0.0; }
   }
 
   return padded;
@@ -153,7 +151,7 @@ void unpad_matrix(const std::array<std::array<double, PaddedN>, PaddedN> &padded
 {
 
   for (std::size_t i = 0; i < N; ++i) {
-    for (std::size_t j = 0; j < N; ++j) { result.at(i).at(j) = padded.at(i).at(j); }
+    for (std::size_t j = 0; j < N; ++j) { result[i][j] = padded[i][j]; }
   }
 }
 

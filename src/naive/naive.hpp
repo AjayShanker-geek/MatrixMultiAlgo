@@ -19,9 +19,9 @@ void naive_matmul(const std::array<std::array<double, N>, N> &A,
   // i-j-k loop order
   for (std::size_t i = 0; i < N; ++i) {
     for (std::size_t j = 0; j < N; ++j) {
-      C.at(i).at(j) = 0.0;
+      C[i][j] = 0.0;
 
-      for (std::size_t k = 0; k < N; ++k) { C.at(i).at(j) += A.at(i).at(k) * B.at(k).at(j); }
+      for (std::size_t k = 0; k < N; ++k) { C[i][j] += A[i][k] * B[k][j]; }
     }
   }
 }
